@@ -9,6 +9,7 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] Text _highScoreTextView;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,10 +21,14 @@ public class MainMenuController : MonoBehaviour
         {
             AudioManager.Instance.PlaySong(_startingSong);
         }
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
     public void ExitGame()
     {
         Application.Quit();
         Debug.Log("please quit");
     }
+
+    
 }

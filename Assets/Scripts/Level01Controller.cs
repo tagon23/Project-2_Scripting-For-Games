@@ -8,6 +8,8 @@ public class Level01Controller : MonoBehaviour
 {
     [SerializeField] Text _currentscoretoView;
     [SerializeField] GameObject menupannel;
+    [SerializeField] GameObject player;
+    [SerializeField] GameObject HUD;
 
     int _currentScore;
     int count;
@@ -15,6 +17,9 @@ public class Level01Controller : MonoBehaviour
     private void Awake()
     {
         menupannel.SetActive(false);
+        player.SetActive(true);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void Update()
@@ -24,13 +29,18 @@ public class Level01Controller : MonoBehaviour
         if (count == 0 && Input.GetKeyDown(KeyCode.Escape))
         {
             ActivateMenu();
+            player.SetActive(false);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }else if (count == 1 && Input.GetKeyDown(KeyCode.Escape))
         {
             ResumeLevel();
+            player.SetActive(true);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
 
-
-
+        
 
         //increase score
         //TODO replace with real implementation
@@ -75,4 +85,7 @@ public class Level01Controller : MonoBehaviour
         menupannel.SetActive(false);
         count = 0;
     }
+
+    
+    
 }
