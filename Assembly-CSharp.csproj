@@ -62,6 +62,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\EnemyAI.cs" />
+    <Compile Include="Assets\EnemyHealth.cs" />
+    <Compile Include="Assets\Melee.cs" />
+    <Compile Include="Assets\Missile.cs" />
     <Compile Include="Assets\Scripts\AudioHelper.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\FPSInput.cs" />
@@ -75,6 +79,8 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Quit Application.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
+    <Compile Include="Assets\grapple.cs" />
+    <Compile Include="Assets\missileSpawner.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/Unity/Unity/Hub/Editor/2019.4.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

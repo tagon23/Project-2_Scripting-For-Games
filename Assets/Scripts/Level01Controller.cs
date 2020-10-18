@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,6 +11,7 @@ public class Level01Controller : MonoBehaviour
     [SerializeField] GameObject menupannel;
     [SerializeField] GameObject player;
     [SerializeField] GameObject HUD;
+    public Button Resume;
 
     int _currentScore;
     int count;
@@ -20,6 +22,21 @@ public class Level01Controller : MonoBehaviour
         player.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        
+    }
+
+    private void Start()
+    {
+        Resume.onClick.AddListener(TaskOnClick);
+    }
+
+    private void TaskOnClick()
+    {
+        ResumeLevel();
+        player.SetActive(true);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Debug.Log("button pushed. Have a nice day.");
     }
 
     private void Update()
@@ -40,7 +57,10 @@ public class Level01Controller : MonoBehaviour
             Cursor.visible = false;
         }
 
-        
+
+
+
+
 
         //increase score
         //TODO replace with real implementation

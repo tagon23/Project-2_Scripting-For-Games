@@ -2,6 +2,8 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - AudioManager
+    - EnemyAI
+    - EnemyHealth
     - FPSInput
     - FPSMotor
     - GroundDetector
@@ -10,8 +12,12 @@ ScriptsOnlyBuild:
     - HealthBarScript
     - Level01Controller
     - MainMenuController
+    - Melee
+    - Missile
     - PlayerController
     - SceneLoader
+    - grapple
+    - missileSpawner
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -50,8 +56,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
@@ -59,6 +63,8 @@ ScriptsOnlyBuild:
     - Class: 82
       Script: {instanceID: 0}
     - Class: 83
+      Script: {instanceID: 0}
+    - Class: 96
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -69,44 +75,62 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11184}
     - Class: 114
-      Script: {instanceID: 11262}
+      Script: {instanceID: 11220}
     - Class: 114
-      Script: {instanceID: 11280}
+      Script: {instanceID: 11264}
     - Class: 114
-      Script: {instanceID: 11318}
+      Script: {instanceID: 11282}
     - Class: 114
-      Script: {instanceID: 11358}
+      Script: {instanceID: 11320}
     - Class: 114
-      Script: {instanceID: 11458}
+      Script: {instanceID: 11354}
     - Class: 114
-      Script: {instanceID: 11528}
+      Script: {instanceID: 11362}
     - Class: 114
-      Script: {instanceID: 11678}
+      Script: {instanceID: 11462}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11532}
     - Class: 114
-      Script: {instanceID: 11870}
+      Script: {instanceID: 11682}
     - Class: 114
-      Script: {instanceID: 11886}
+      Script: {instanceID: 11700}
     - Class: 114
-      Script: {instanceID: 12130}
+      Script: {instanceID: 11750}
     - Class: 114
-      Script: {instanceID: 12564}
+      Script: {instanceID: 11822}
     - Class: 114
-      Script: {instanceID: 12610}
+      Script: {instanceID: 11878}
     - Class: 114
-      Script: {instanceID: 12760}
+      Script: {instanceID: 11894}
     - Class: 114
-      Script: {instanceID: 12960}
+      Script: {instanceID: 12138}
     - Class: 114
-      Script: {instanceID: 12966}
+      Script: {instanceID: 12556}
     - Class: 114
-      Script: {instanceID: 12992}
+      Script: {instanceID: 12574}
+    - Class: 114
+      Script: {instanceID: 12620}
+    - Class: 114
+      Script: {instanceID: 12770}
+    - Class: 114
+      Script: {instanceID: 12970}
+    - Class: 114
+      Script: {instanceID: 12976}
+    - Class: 114
+      Script: {instanceID: 13002}
+    - Class: 114
+      Script: {instanceID: 13670}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 120
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
     - Class: 136
+      Script: {instanceID: 0}
+    - Class: 143
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -152,25 +176,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11288}
+      Script: {instanceID: 11290}
     - Class: 114
-      Script: {instanceID: 11318}
+      Script: {instanceID: 11320}
     - Class: 114
-      Script: {instanceID: 11358}
+      Script: {instanceID: 11362}
     - Class: 114
-      Script: {instanceID: 11528}
+      Script: {instanceID: 11532}
     - Class: 114
-      Script: {instanceID: 11678}
+      Script: {instanceID: 11682}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11750}
     - Class: 114
-      Script: {instanceID: 12130}
+      Script: {instanceID: 12138}
     - Class: 114
-      Script: {instanceID: 12562}
+      Script: {instanceID: 12572}
     - Class: 114
-      Script: {instanceID: 12610}
+      Script: {instanceID: 12620}
     - Class: 114
-      Script: {instanceID: 12960}
+      Script: {instanceID: 12970}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -220,6 +244,12 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
+      Hash: 95ac9e8ee31b6c39585cf38d9b19e801
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyHealth
+  - hash:
+      serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -232,7 +262,7 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
-      Hash: 67315bbf0df7b6bcb061916596d4903a
+      Hash: 7aefa8c1487d179f6739e87b17a95d04
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FPSMotor
@@ -280,6 +310,12 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
+      Hash: 878af8747fd12ff569306cbebe3dd868
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: missileSpawner
+  - hash:
+      serializedVersion: 2
       Hash: 89f9a1b4c64db9559e39f4a2e3bfaadd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -310,7 +346,7 @@ ScriptsOnlyBuild:
     className: ContentSizeFitter
   - hash:
       serializedVersion: 2
-      Hash: bcf036f67625966c0ac165b671083aec
+      Hash: d9a73c5c07a9e7682d27e3d5a7a05c73
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Level01Controller
@@ -382,6 +418,12 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: 69c914636fe84422a0b11002f7327008
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Missile
+  - hash:
+      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -412,13 +454,19 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyAI
+  - hash:
+      serializedVersion: 2
       Hash: 1028c39545bcfa841aaab54121e69a47
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Health
   - hash:
       serializedVersion: 2
-      Hash: eb879cde96f6c6763f6d00f8c1c4b7a9
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Gun
@@ -530,6 +578,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: grapple
   - hash:
       serializedVersion: 2
       Hash: 7e233d4781867fa68269627c8eecbfea
@@ -680,9 +734,15 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 64616e95028829a049e4fab672a2e9c5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Melee
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Level01.unity
-  playerPath: D:/2020 spring semester/Scripting for games/Testing/Project 2B/FPS
+  playerPath: D:/2020 spring semester/Scripting for games/Testing/Project 2D/FPS
     Project 2.exe
