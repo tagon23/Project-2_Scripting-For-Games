@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - Gun
     - Health
     - HealthBarScript
+    - InputSpawner
     - Level01Controller
     - MainMenuController
     - Melee
@@ -17,7 +18,6 @@ ScriptsOnlyBuild:
     - PlayerController
     - SceneLoader
     - grapple
-    - missileSpawner
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -83,43 +83,43 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11320}
     - Class: 114
-      Script: {instanceID: 11354}
-    - Class: 114
       Script: {instanceID: 11362}
     - Class: 114
       Script: {instanceID: 11462}
     - Class: 114
-      Script: {instanceID: 11532}
+      Script: {instanceID: 11478}
     - Class: 114
-      Script: {instanceID: 11682}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11700}
+      Script: {instanceID: 11536}
     - Class: 114
-      Script: {instanceID: 11750}
+      Script: {instanceID: 11686}
     - Class: 114
-      Script: {instanceID: 11822}
+      Script: {instanceID: 11704}
     - Class: 114
-      Script: {instanceID: 11878}
+      Script: {instanceID: 11754}
     - Class: 114
-      Script: {instanceID: 11894}
+      Script: {instanceID: 11826}
     - Class: 114
-      Script: {instanceID: 12138}
+      Script: {instanceID: 11882}
     - Class: 114
-      Script: {instanceID: 12556}
+      Script: {instanceID: 11898}
     - Class: 114
-      Script: {instanceID: 12574}
+      Script: {instanceID: 12142}
     - Class: 114
-      Script: {instanceID: 12620}
+      Script: {instanceID: 12560}
     - Class: 114
-      Script: {instanceID: 12770}
+      Script: {instanceID: 12578}
     - Class: 114
-      Script: {instanceID: 12970}
+      Script: {instanceID: 12624}
     - Class: 114
-      Script: {instanceID: 12976}
+      Script: {instanceID: 12774}
     - Class: 114
-      Script: {instanceID: 13002}
+      Script: {instanceID: 12974}
     - Class: 114
-      Script: {instanceID: 13670}
+      Script: {instanceID: 12980}
+    - Class: 114
+      Script: {instanceID: 13006}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -182,19 +182,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11362}
     - Class: 114
-      Script: {instanceID: 11532}
+      Script: {instanceID: 11536}
     - Class: 114
-      Script: {instanceID: 11682}
+      Script: {instanceID: 11686}
     - Class: 114
-      Script: {instanceID: 11750}
+      Script: {instanceID: 11754}
     - Class: 114
-      Script: {instanceID: 12138}
+      Script: {instanceID: 12142}
     - Class: 114
-      Script: {instanceID: 12572}
+      Script: {instanceID: 12576}
     - Class: 114
-      Script: {instanceID: 12620}
+      Script: {instanceID: 12624}
     - Class: 114
-      Script: {instanceID: 12970}
+      Script: {instanceID: 12974}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -262,7 +262,7 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
-      Hash: 7aefa8c1487d179f6739e87b17a95d04
+      Hash: d943e66c193c776e21603f1fd602577b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FPSMotor
@@ -356,6 +356,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 605d2f6a2582ed1ef3f99c4b14bad1df
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InputSpawner
+  - hash:
+      serializedVersion: 2
+      Hash: 64616e95028829a049e4fab672a2e9c5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Melee
   - hash:
       serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
@@ -734,15 +746,9 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 64616e95028829a049e4fab672a2e9c5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Melee
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Level01.unity
-  playerPath: D:/2020 spring semester/Scripting for games/Testing/Project 2D/FPS
+  playerPath: D:/2020 spring semester/Scripting for games/LaliberteTristan_2D/FPS
     Project 2.exe
